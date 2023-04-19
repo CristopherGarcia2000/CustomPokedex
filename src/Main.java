@@ -3,7 +3,7 @@ import net.salesianos.pokemitos.legendarios.Legendario;
 import net.salesianos.utilidades.ListaPokemon;
 
 import java.util.Scanner;
-//TODO: commit fix método ahora pide String y capturado público para cambiarlo en el 3  y push origin
+
 public class Main {
     public static void main(String[] args) {
         int opcion = -1;
