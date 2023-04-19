@@ -54,6 +54,10 @@ public class Pokemon {
         this.descripcion = descripcion;
     }
 
+    public void Capturado() {
+        this.capturado = true;
+    }
+
     @Override
     public String toString() {
         if(capturado) {

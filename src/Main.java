@@ -3,11 +3,12 @@ import net.salesianos.pokemitos.legendarios.Legendario;
 import net.salesianos.utilidades.ListaPokemon;
 
 import java.util.Scanner;
-
+//TODO: commit fix método ahora pide String y capturado público para cambiarlo en el 3  y push origin
 public class Main {
     public static void main(String[] args) {
         int opcion = -1;
-        String nombrePokemon,tipo,localizacion;
+        String nombrePokemon,tipo,localizacion,descripcion;
+        double peso,altura;
         ListaPokemon avistados = new ListaPokemon();
         ListaPokemon capturados = new ListaPokemon();
         Scanner teclao = new Scanner(System.in);
@@ -44,7 +45,23 @@ public class Main {
                     nombrePokemon = teclao.nextLine();
                     if(avistados.devolverPokemon(nombrePokemon) != null){
                         capturados.addPokemon(avistados.devolverPokemon(nombrePokemon));
+                        for (int i = 0; i < capturados.listaPokemon.length; i++) {
+                            if (capturados.listaPokemon[i].getNombre().equals(nombrePokemon)){
+                                capturados.listaPokemon[i].Capturado();
+                                System.out.println("Introduce la altura: ");
+                                altura = teclao.nextDouble();
+                                capturados.listaPokemon[i].setAltura(altura);
+                                System.out.println("Introduce el peso: ");
+                                peso = teclao.nextDouble();
+                                capturados.listaPokemon[i].setPeso(peso);
+                                System.out.println("Introduce una breve descripción: ");
+                                descripcion = teclao.nextLine();
+                                capturados.listaPokemon[i].setDescripcion(descripcion);
+
+                            }
+                        }
                         avistados.deletePokemon(nombrePokemon);
+
                     }else {
                         System.out.println(nombrePokemon + " no está");
                     }

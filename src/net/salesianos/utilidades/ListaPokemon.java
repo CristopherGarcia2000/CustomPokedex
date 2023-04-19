@@ -4,7 +4,7 @@ import net.salesianos.pokemitos.general.Pokemon;
 
 public class ListaPokemon {
     private int contador = 0;
-    private Pokemon listaPokemon[] = new Pokemon[1];
+    public Pokemon listaPokemon[] = new Pokemon[1];
 
     public ListaPokemon() {
 
