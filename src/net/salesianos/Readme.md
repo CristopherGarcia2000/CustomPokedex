@@ -18,5 +18,5 @@ localización
 que tiene métodos para añadir, borrar, mostrar y otra que devuelve un
 Pokemon
 
-* [Manual de Usuario] (doc/ManualUsuario.md)
+* [Manual de Usuario](doc/ManualUsuario.md)
 
